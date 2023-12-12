@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block titul %} Inicio {% endblock %}
+
+{% block contenedor %}
+
+    <main>
+        <section>
+            <div id="carouselExampleFade" class="carousel slide carousel-fade">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="{% static 'tienda/img/home.png' %}" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="{% static 'tienda/img/home2T.jpg' %}" class="d-block w-100" alt="...">
+                    <a href="#" class="btn btn-outline-dark">Descubre Mas</a>
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+        </section>
+        <section class="mt-4">
+            <div class="d-flex justify-content-evenly">
+                <div class="card" style="width: 18rem;">
+                    <img src="{% static 'tienda/img/vestidoB.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="text-center">Renacer</p>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="{% static 'tienda/img/vestido.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="text-center">Conectar</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="mt-4">
+            <h3 class="text-center">¿Quiénes Somos?</h3>
+                <div class="container text-center mt-3">
+                  <div class="row align-items-start">
+                    <div class="col">
+                        <h4>Mision</h4>
+                        <p>Nuestra misión es empoderar honrar y celebrar a las mujeres; somo una empresa creada por mujeres y hecha a mano por mujeres, creemos en el rol activo que cumplimos positivamente en la sociedad.</p>
+                        <img src="{% static 'tienda/img/mision.png' %}" style="width: 100%">
+                    </div>
+                    <div class="col">
+                        <h4>Vision</h4>
+                        <p class="mb-5">En el 2028 nos visualizamos como una empresa que ha devuelto y fortalecido la esencia de ser mujer, donde contamos la historia de las mujeres que hemos empoderado y sanado estas heridas.</p>
+                        <img src="{% static 'tienda/img/vision.png' %}" style="width: 78%">
+                    </div>
+                  </div>
+                </div>
+        </section>
+    </main>
+    
+{% endblock %}

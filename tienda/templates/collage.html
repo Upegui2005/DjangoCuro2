@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block titul %} Collage {% endblock %}
+
+{% block contenedor %}
+    <style>
+        .collage{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+        .foto{
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s;
+        }
+        .foto:hover{
+            transform: scale(1.2);
+        }
+    </style>
+    <main>
+        <section>
+            <div class="collage">
+                <img src="{% static 'tienda/img/1.jpg' %}" alt="" class="foto">
+                <img src="{% static 'tienda/img/2.jpg' %}" alt="" class="foto">
+                <img src="{% static 'tienda/img/3.jpg' %}" alt="" class="foto">
+                <img src="{% static 'tienda/img/4.jpg' %}" alt="" class="foto">
+                <img src="{% static 'tienda/img/5.jpg' %}" alt="" class="foto">
+                <img src="{% static 'tienda/img/6.jpg' %}" alt="" class="foto">
+                <img src="{% static 'tienda/img/7.jpg' %}" alt="" class="foto">
+                <img src="{% static 'tienda/img/8.jpg' %}" alt="" class="foto">
+                <img src="{% static 'tienda/img/9.jpg' %}" alt="" class="foto">
+                <img src="{% static 'tienda/img/10.jpg' %}" alt="" class="foto">
+                <img src="{% static 'tienda/img/11.jpg' %}" alt="" class="foto">
+                <img src="{% static 'tienda/img/12.jpg' %}" alt="" class="foto">
+            </div>
+        </section>
+    </main>
+
+{% endblock %}
