@@ -1,0 +1,20 @@
+databases:
+  - name: curo
+    databaseName: curoDB
+    user: curo
+
+services:
+  - type: web
+    name: curo
+    runtime: python
+    buildCommand: "./build.sh"
+    startCommand: "gunicorn curo.wsgi:application"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: curoDB
+          property: connectionString
+      - key: SECRET_KEY
+        generateValue: true
+      - key: WEB_CONCURRENCY
+        value: 4
