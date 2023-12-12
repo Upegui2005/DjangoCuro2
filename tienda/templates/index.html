@@ -5,7 +5,18 @@
 {% block titul %} Inicio {% endblock %}
 
 {% block contenedor %}
-
+    <style>
+        .carousel-item{
+            position: relative;
+        }
+        .carousel-item .btn{
+            position: absolute;
+            bottom: 240px;
+            left: 200px;
+            z-index: 1;
+            background-color: #D6CAA1;
+        }
+    </style>
     <main>
         <section>
             <div id="carouselExampleFade" class="carousel slide carousel-fade">
@@ -15,7 +26,7 @@
                 </div>
                 <div class="carousel-item">
                     <img src="{% static 'tienda/img/home2T.jpg' %}" class="d-block w-100" alt="...">
-                    <a href="#" class="btn btn-outline-dark">Descubre Mas</a>
+                    <a href="{% url 'tienda:collage' %}" class="btn">Descubre Mas</a>
                 </div>
               </div>
               <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
